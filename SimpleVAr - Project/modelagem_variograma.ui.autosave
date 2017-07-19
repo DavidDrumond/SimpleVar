@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Modelagem_Variograma</class>
+ <widget class="QDialog" name="Modelagem_Variograma">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>921</width>
+    <height>714</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Modelagem Variograma</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="imagens.qrc">
+    <normaloff>:/imagens/SimpleVar.png</normaloff>:/imagens/SimpleVar.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Parâmetros</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QCheckBox" name="Varpriori">
+          <property name="text">
+           <string>Mostrar Variância a Priori</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="showpar">
+          <property name="text">
+           <string>Mostrar Pares Variograma Experimental</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Efeito Pepita</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="Efeito_Pepita">
+            <property name="locale">
+             <locale language="English" country="UnitedStates"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Número de estruturas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="n_estruturas">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tabela">
+          <column>
+           <property name="text">
+            <string>Azimute</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Mergulho</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Plunge</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Max alcance</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Med alcance</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Min alacance</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Contribuição</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Modelo</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="Grafico_prop">
+          <column>
+           <property name="text">
+            <string>Gráfico</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Classe</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Inverter Eixo</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Modelar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Salvar Imagem</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCustomPlot" name="customPlot" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>600</width>
+       <height>600</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="imagens.qrc"/>
+ </resources>
+ <connections/>
+</ui>
