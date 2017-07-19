@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/imagens">
+        <file>SimpleVar.png</file>
+        <file>SimpleVar2.png</file>
+    </qresource>
+</RCC>
